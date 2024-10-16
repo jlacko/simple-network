@@ -166,3 +166,6 @@ data/*
 
 # kromě zaraženého kolíku!
 !data/.stake.txt
+
+# logy zpracování
+log.txt

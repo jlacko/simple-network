@@ -6,12 +6,15 @@ cat(paste(Sys.time(), "Začínám stahovat data z OSM...\n"))
 
 # stejně dobrý město jako každý jiný...
 result <- opq("Plzeň") %>%
-    add_osm_feature(key = "highway") %>%
+    add_osm_feature(key = "highway",
+                    value = c("motorway", "trunk", "primary", "secondary",
+                              "tertiary", "housing", "residential")) %>%
     osmdata_sf()
 
 # pouze čáry
 ulice <- result$osm_lines %>%
-    dplyr::select(name)
+    dplyr::select(name) %>%
+    st_transform(5514) # jeden Křovák vládne všem!
 
 # hláška pro diváky
 cat(paste(Sys.time(), "data stažena, ukládám\n"))
