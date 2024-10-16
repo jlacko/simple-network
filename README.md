@@ -1,9 +1,7 @@
 # simple-network
-Applied network simplification
-
 Proof of concept of network simplification using [sgeop](https://github.com/uscuni/sgeop) python package in a dockerized environment.
 
-To be used as a development image in VS Code; the image is based on Ubuntu 24.04 and includes necessary packages for building and running the sgeop package.
+To be used as a development image in VS Code; the docker image is based on Ubuntu 24.04 and includes necessary packages for building and running the sgeop package.
 
 <p align="center">
     <img src="https://imgflip.com/s/meme/One-Does-Not-Simply.jpg" alt="one does not simply..."/>
